@@ -1,9 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
+import { ColorModeProvider } from './ColorModeContext';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <ColorModeProvider >
+      <App />
+    </ColorModeProvider >
   </StrictMode>,
 )
